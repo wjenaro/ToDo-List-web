@@ -1,14 +1,23 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Todo List</h1>
-    <ul>
-       for (const todo of todos) { 
-        <li> todo </li>
-      } 
-    </ul>
-    <form action="/add" method="post">
-      <input type="text" name="todo" placeholder="Add a new todo">
-      <input type="submit" value="Add">
-    </form>
+<div class="task">
+  <ul>
+  
+     <li> Program </li>
+ 
+  
+ </ul>
+ </div>
+ <div class="add-form">
+  <form action="/add" method="post">
+    <input type="text" name="todo" placeholder="Add a new todo">
+    <input type="submit" value="Add">
+  </form>
+
+ </div>
+ 
+
+   
 
 <%- include("partials/footer.ejs") %>
