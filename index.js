@@ -1,5 +1,6 @@
 import express from "express";
 import ejs from "ejs";
+import bodyParser from "body-parser";
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -7,23 +8,12 @@ const port = process.env.PORT || 8000;
 app.set("view engine", "ejs");
 // add styling
 app.use(express.static("public"));
+//use bodyParser
+app.use(bodyParser.urlencoded({extended:true}));
 // list objects to include in the list
 const taskList = [
   "Wake up",
-  "Eat breakfast",
-  "Get dressed",
-  "Go to work",
-  "Take a break",
-  "Eat lunch",
-  "Work on projects",
-  "Take another break",
-  "Finish work",
-  "Go home",
-  "Make dinner",
-  "Eat dinner",
-  "Relax",
-  "Go to bed",
-];
+  ];
 
 app.get("/", (req, res) => {
   // Render the EJS template with the task list
@@ -33,13 +23,13 @@ app.get("/", (req, res) => {
 // Define a route for the `/add` path
 app.post("/add", (req, res) => {
   // Get the new todo item from the request body
-  const newTask = req.body.task;
-
+  const newTask = req.body['todo'];
+  //const numLetters = req.body["fName"].length + req.body["lName"].length;
+console.log(newTask);
   // Add the new todo item to the task list
   taskList.push(newTask);
-
   // Redirect to the todo list page
-  res.redirect("/");
+  res.render("index.ejs", {tasks: taskList});
 });
 
 // Listening to the server

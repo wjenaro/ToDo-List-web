@@ -6,7 +6,6 @@
  <% tasks.forEach( (taskList)=>{ %> 
     
         <li id="tasklist"> <%= taskList %> </li>
-  
    
 <%  }
 
@@ -14,12 +13,11 @@
 %>
 </ul>
  
- 
  </div>
- <div class="add-form">
+ <div class="add-form" style="background-color: brown;">
   <form action="/add" method="post">
-    <input type="text" name="todo" placeholder="Add a new todo">
-    <input type="submit" value="Add">
+    <input type="text" name="todo" id="taskinput" placeholder="Add a new todo">
+    <input type="submit" value="Add" id="submitbutton">
   </form>
 
  </div>

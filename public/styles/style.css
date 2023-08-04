@@ -18,8 +18,11 @@
   
   #taskItems li {
     /* Optional styles for individual list items */
+    background: linear-gradient(135deg, #ff6b6b, #55c4f5);
+    color: white;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #543175;
+    border-radius: 5px;
   }
   
 
@@ -30,3 +33,15 @@
 }
 
   
+#taskinput{
+  width: 600px; /* Set the desired width in pixels or any other valid CSS unit */
+  /* Additional styles for the input field if needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#submitbutton{
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
