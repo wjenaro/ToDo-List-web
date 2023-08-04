@@ -17,12 +17,13 @@
   }
   
   #taskItems li {
-    /* Optional styles for individual list items */
+   
     background: linear-gradient(135deg, #ff6b6b, #55c4f5);
     color: white;
     padding: 10px;
     border: 1px solid #543175;
     border-radius: 5px;
+    width: 700px;
   }
   
 
@@ -32,16 +33,30 @@
     justify-content: center;
 }
 
-  
-#taskinput{
-  width: 600px; /* Set the desired width in pixels or any other valid CSS unit */
-  /* Additional styles for the input field if needed */
+.checkbox {
+
+  background-color: black;
+  float: left;
+  margin-right: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+ 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
 }
-#submitbutton{
-    width: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+li:hover {
+  background-color: #0d9b14; 
+  color: #333; /* Change to the desired hover text color */
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.3); /* Add a glowing effect on hover */
 }

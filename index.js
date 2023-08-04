@@ -24,12 +24,14 @@ app.get("/", (req, res) => {
 app.post("/add", (req, res) => {
   // Get the new todo item from the request body
   const newTask = req.body['todo'];
-  //const numLetters = req.body["fName"].length + req.body["lName"].length;
-console.log(newTask);
   // Add the new todo item to the task list
   taskList.push(newTask);
   // Redirect to the todo list page
-  res.render("index.ejs", {tasks: taskList});
+  res.redirect("/");
+});
+
+app.post('/delete', (req, res) => {
+   res.redirect('/');
 });
 
 // Listening to the server

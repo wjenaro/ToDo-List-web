@@ -2,16 +2,21 @@
 
 <h1>Todo List</h1>
 <div class="task">
+  <form action="/delete" method="post">
   <ul id="taskItems">
- <% tasks.forEach( (taskList)=>{ %> 
+ <% tasks.forEach( (taskList, index)=>{ %> 
     
-        <li id="tasklist"> <%= taskList %> </li>
+        <li id="tasklist">
+          <input type="checkbox" name="checkedItems" class="checkbox" value="<%= index %>">  
+           <%= taskList %> </li>
    
 <%  }
 
 ); 
 %>
 </ul>
+
+  </form>
  
  </div>
  <div class="add-form" style="background-color: brown;">
