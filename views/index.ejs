@@ -2,12 +2,19 @@
 
 <h1>Todo List</h1>
 <div class="task">
-  <ul>
+  <ul id="taskItems">
+ <% tasks.forEach( (taskList)=>{ %> 
+    
+        <li id="tasklist"> <%= taskList %> </li>
   
-     <li> Program </li>
+   
+<%  }
+
+); 
+%>
+</ul>
  
-  
- </ul>
+ 
  </div>
  <div class="add-form">
   <form action="/add" method="post">

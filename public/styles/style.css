@@ -5,10 +5,24 @@
  
     justify-content: center;
 }
-
-ul {
-    list-style-type: none;
+#taskItems {
+    justify-content: center; /* Align the list horizontally at the center */
+    align-items: center; /* Align the list vertically at the center */
+    /* Additional styles for the list if needed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    text-align: center;
   }
+  
+  #taskItems li {
+    /* Optional styles for individual list items */
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+
 .add-form{
     width: 100%;
     display: flex;
